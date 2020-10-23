@@ -28,8 +28,8 @@ function addTask(){
             allContent.innerHTML = `  <div class="task">
             <div class="head-task">
             <h6>Temat:</h6>
+            <p class="date">${today}</p>
             <input class="input-topic" type="text" placeholder="Click to write" >
-            <p class="date">${today}r.</p>
             </div>
             <textarea class="textarea-text" placeholder="Click to write"></textarea>
             <button class="save">Save</button>
@@ -43,11 +43,13 @@ function addTask(){
                 topicArray.push(textTopic);
                 textArray.push(textArea);
                 const addPlace = document.querySelector('.topic');
-                addPlace.innerHTML += `
-                <div class="btn-topic">
+                    addPlace.innerHTML += `
+                    <div class="btn-topic">
                     <h3>${textTopic}</h3>
-                </div>`;
+                    </div>`;
+                
             task.remove();
+            
             btnAdd.style.display = "inline";
             delTask();
             });
@@ -69,7 +71,7 @@ function delTask(){
             if(ev.target.tagName === 'H3'){
                 
                                 const topicText = ev.target.textContent;
-                
+                                
                                 const textContent = textArray[topicArray.indexOf(topicText)];
                 
                                 
@@ -78,7 +80,7 @@ function delTask(){
                                 <div class="task">
                                 <div class="head-task">
                                 <h2>Temat: ${topicText}</h2>
-                                <p class="date">20.10.2020 r.</p>
+                                <p class="date">20.10.2020</p>
                             </div>
                             <p class="tekst">${textContent}</p>
                            
@@ -96,12 +98,13 @@ function delTask(){
                                                 ev.target.remove();
                                                 const task = document.querySelector('.task');
                                                     task.remove();
+                                                   
                                                 e.addEventListener('transitionend' , ()=>{
-                                                    console.log('dasdsa')
-                                                    allContent.innerHTML = `<h4>Create your first task</h4>
-                                                    <button class="start">></button>`;
+                                                    // console.log('dasdsa')
+                                                    // allContent.innerHTML = `<h4>Create your first task</h4>
+                                                    // <button class="start">></button>`;
                                                     e.remove();
-                                                    start();
+                                                    // start();
                                                 });
                                             }
         })

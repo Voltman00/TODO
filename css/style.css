@@ -58,7 +58,7 @@ header {
 nav {
   position: relative;
   height: 100vh;
-  width: 30vw;
+  width: 25vw;
   box-shadow: 7px 0px 16px 2px rgba(0, 0, 0, 0.6);
   float: left;
   background-color: #131A26; }
@@ -79,7 +79,7 @@ button {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 70vw;
+  width: 75vw;
   float: left;
   background-color: #181F33; }
 
@@ -94,17 +94,24 @@ button {
   background-color: #131A26; }
 
 h1 {
+  font-size: 1.5rem;
   height: 5vh;
-  font-size: 2rem;
   font-weight: bold;
   line-height: 5vh;
   text-align: center;
   border: 1px solid black;
   color: #F20574;
-  box-shadow: 0px 0px 167px 38px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 0px 167px 38px rgba(0, 0, 0, 0.3);
+  overflow: hidden; }
+  @media all and (min-width: 900px) {
+    h1 {
+      font-size: 1.8rem; } }
+  @media all and (min-width: 1250px) {
+    h1 {
+      font-size: 2rem; } }
 
 h2 {
-  width: 80%;
+  width: 6%;
   padding-left: 20px;
   line-height: 6vh;
   float: left;
@@ -115,15 +122,26 @@ p {
   color: #739DE6; }
 
 .date {
-  width: 20%;
+  width: 30%;
   height: 6vh;
   text-align: right;
   padding: 0px 15px 0px 15px;
   line-height: 6vh;
   font-weight: bold;
-  font-size: 1.2rem;
-  float: left;
+  display: none;
+  float: right;
   color: white; }
+  @media all and (min-width: 650px) {
+    .date {
+      display: block; } }
+  @media all and (min-width: 900px) {
+    .date {
+      font-size: 1rem;
+      width: 30%; } }
+  @media all and (min-width: 1250px) {
+    .date {
+      font-size: 1.2rem;
+      width: 30%; } }
 
 .head-task {
   height: 6vh;
@@ -180,25 +198,52 @@ h3 {
   margin-left: 5px; }
 
 .input-topic {
-  width: 70%;
+  width: 50%;
   height: 6vh;
   background-color: transparent;
   color: white;
   border: 0px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   float: left; }
   .input-topic::placeholder {
     color: rgba(255, 255, 255, 0.603);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-decoration: underline; }
+    @media all and (min-width: 900px) {
+      .input-topic::placeholder {
+        font-size: 1.1rem; } }
+    @media all and (min-width: 1250px) {
+      .input-topic::placeholder {
+        font-size: 1.3rem; } }
+  @media all and (min-width: 650px) {
+    .input-topic {
+      width: 40%; } }
+  @media all and (min-width: 900px) {
+    .input-topic {
+      width: 50%; } }
+  @media all and (min-width: 1250px) {
+    .input-topic {
+      min-width: 10%; } }
 
 h6 {
-  font-size: 1.3rem;
+  height: 6vh;
+  font-size: 1.1rem;
   line-height: 6vh;
   padding-left: 20px;
   font-weight: bold;
   float: left;
-  width: 10%; }
+  width: 40%; }
+  @media all and (min-width: 650px) {
+    h6 {
+      width: 30%; } }
+  @media all and (min-width: 900px) {
+    h6 {
+      width: 18%;
+      font-size: 1.2rem; } }
+  @media all and (min-width: 1250px) {
+    h6 {
+      width: 14%;
+      font-size: 1.3rem; } }
 
 .textarea-text {
   height: 74%;
@@ -211,25 +256,45 @@ h6 {
   border: 0px;
   font-size: 1.3rem;
   font-weight: bold;
-  overflow: auto; }
+  overflow: hidden; }
   .textarea-text::placeholder {
-    font-size: 5rem;
     font-weight: bold;
     text-align: center;
     line-height: 50vh;
     color: #181F33;
-    color: #739de663; }
+    color: #739de663;
+    font-size: 2rem; }
+    @media all and (min-width: 650px) {
+      .textarea-text::placeholder {
+        font-size: 2rem; } }
+    @media all and (min-width: 900px) {
+      .textarea-text::placeholder {
+        font-size: 3rem; } }
+    @media all and (min-width: 1250px) {
+      .textarea-text::placeholder {
+        top: 50%;
+        font-size: 4.4rem; } }
 
 .fall {
   transform: translate(-8rem);
   opacity: 0; }
 
 h4 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
+  text-align: center;
   color: #739de6ab;
   color: #F20574;
   transition: all 1s; }
+  @media all and (min-width: 650px) {
+    h4 {
+      font-size: 2.8rem; } }
+  @media all and (min-width: 900px) {
+    h4 {
+      font-size: 3.6rem; } }
+  @media all and (min-width: 1250px) {
+    h4 {
+      font-size: 5rem; } }
 
 .save {
   width: 80px;
@@ -240,15 +305,21 @@ h4 {
 
 .start {
   margin: 30px;
-  width: 50px;
-  height: 50px;
   background-color: transparent;
   border: 2px solid #F20574;
   color: #F20574;
   border-radius: 50%;
   font-size: 1.2rem;
   font-weight: bold;
-  line-height: 45px;
   text-align: center; }
+  @media all and (min-width: 900px) {
+    .start {
+      line-height: 35px;
+      width: 40px;
+      height: 40px; } }
+  @media all and (min-width: 1250px) {
+    .start {
+      width: 50px;
+      height: 50px; } }
 
 /*# sourceMappingURL=style.css.map */
