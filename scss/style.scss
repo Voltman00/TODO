@@ -80,7 +80,7 @@ h1{
 }
 h2{
     
-    width: 6%;
+    width: 60%;
     padding-left: 20px;
     line-height: 6vh;
     // color: #7D6BBF;
@@ -149,12 +149,21 @@ h3{
     line-height: 4vh;
     font-weight: bold;
     float: left;
-    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.753);
     border-radius: 15px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     // transition:all 1s ease;
-    
+    @include small{
+        font-size: 1rem;
+    }
+    @include medium{
+        font-size: 1.1rem;
+    }
+    @include large{
+        font-size: 1.3rem;
+
+    }
+    overflow: hidden;
 }
 .btn-topic{
     width: 100%;
